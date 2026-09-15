@@ -1,6 +1,6 @@
 from main import analyze_win_rate as awr
 import pandas as pd
-df = pd.read_csv(r'D:\Python\my_dataset.csv',index_col=0)
+df = pd.read_csv(r'my_dataset.csv',index_col=0)
 awr(df)
 '''# یک سری از هر استراتژی و تعداد اس ال های اون
 sl_size = (df[df['position'] == 'SL']).groupby('strategy').size().items()
