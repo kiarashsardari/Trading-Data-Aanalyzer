@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv(r'D:\Python\my_dataset.csv',index_col=0)
+df = pd.read_csv(r'my_dataset.csv',index_col=0)
 
 def get_positions(df):
     return(list(df['position']))
