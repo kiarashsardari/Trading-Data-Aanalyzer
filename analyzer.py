@@ -1,9 +1,11 @@
 # تعداد هر استراتژی
 def count_strategies(df):
     try:
+        # تعداد هر آیتم از ستون استراتژی
         c = df['strategy'].value_counts()
         return c 
     except KeyError:
+        # اگر ستون استراتژی موجود نبود ارور بده
         return('Error: Strategy column does not exist...')
 
 # نرخ برد
