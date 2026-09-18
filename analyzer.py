@@ -50,9 +50,26 @@ def analyze_win_rate(df):
     # خروجی : یک لیست شامل چند دیکشنری
     return main_lst + main_lst2
 
-
-
- 
+# تعداد هر نوع پوزیشن
+def position_count(df):
+	return (df.groupby('position').size())
+	
+	
+def tp_exit_rate(df):
+	p_count = position_count(df).items()
+	pos_rate = {}
+	for pos, count in p_count:
+		andis = int(pos[2:]) if str(pos).startswith('TP') else 0
+		pos_rate[pos] = count * andis
+	return pos_rate
+	
+	
+def best_tp(df):
+	grp = tp_exit_rate(df)
+	m = max(grp.values())
+	best_tps = [pos for pos, rate in grp.items() if rate == m]
+	return (best_tps)
+	 
 
 
 '''def analyze_win_rate(df):
@@ -70,5 +87,3 @@ def analyze_win_rate(df):
         for o in strategies_name:
             print(df[df['strategy'].isin([o]) & df['position'].isin([p])])
     print(df[c1.isin(['s']) & df['position'].isin(['SL'])])'''
-
-
