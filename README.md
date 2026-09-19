@@ -77,15 +77,8 @@
 ## ⚙️ پیش‌نیازها
 
 - [Python](https://www.python.org/) نسخه **3.9** یا بالاتر
-- [pip](https://pip.pypa.io/en/stable/)
-- [Git](https://git-scm.com/)
-
-کتابخانه‌های موردنیاز:
-
-| کتابخانه | کاربرد |
-|----------|--------|
-| `pandas` | پردازش داده‌ها و GroupBy |
-| `numpy`  | ساخت داده‌های نمونه و محاسبات عددی |
+- pandas
+- numpy
 
 ---
 
