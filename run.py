@@ -11,7 +11,7 @@ def out(text):
 
 
 try:
-    df = pd.read_csv(r'D:\Python\Trading-Data-Aanalyzer Project\Sample dataset\my_dataset.csv', index_col=0)
+    df = pd.read_csv(r'my_dataset.csv', index_col=0)
 
     #Total trades per strategy
     cs = (analyzer.count_strategies(df)).to_string(header=None)
